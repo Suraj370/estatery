@@ -12,14 +12,14 @@ const Location = () => {
   return (
     <Menu as='div' className="dropdown relative">
     <Menu.Button onClick={() => setisOpen(!isOpen)} className="w-full text-left">
-    <div className='text-slate-400 text-[15px] font-medium leading-tight'>
+    <div className='text-slate-400 text-[15px] font-medium leading-tight space-y-4'>
           Location
         </div>
-        <div className='font-bold text-md lg:text-xl'>
+        <div className='text-bold text-lg lg:text-[15px] justify-between'>
           {location}
         </div>
     </Menu.Button>
-    <Menu.Items className="dropdown-menu">
+    <Menu.Items className="dropdown-menu translate-y-10">
       {locations.map((location, index) => (
         <Menu.Item key={index}>
           {({ active }) => (

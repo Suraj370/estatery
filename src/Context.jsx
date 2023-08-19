@@ -19,13 +19,31 @@ const ContextProvider = ({children}) => {
   const [propertyType, setPropertyType] = useState('Property Type(any)')
   const [propertyTypes, setPropertyTypes] = useState([])
 
+  
+
   useEffect(() => {
     const allLocations = properties.map((property) => {
       return property.location
     })
+
+    const allPropertyTypes = properties.map((property) => {
+      return property.propertyType
+    })
+
     const uniqueLocations = ['Location (any)', ...new Set(allLocations)]
+    const uniqueTypes = ['Property Type(any)', ...new Set(allPropertyTypes)]
     setLocations(uniqueLocations)
+    setPropertyTypes(uniqueTypes)
   },[])
+
+  const handleClick = () => {
+    console.log('clicked');
+  }
+
+
+
+
+ 
  
 
 
@@ -42,6 +60,7 @@ const ContextProvider = ({children}) => {
       setPropertyType,
       propertyType,
       properties,
+      handleClick
       
   }
     
