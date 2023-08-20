@@ -12,11 +12,11 @@ import MobileMenu from './MobileMenu'
 
 const Navbar = () => {
     const [navigation, setNavigation] = useState([
-        { name: 'Rent', link: '/rent', current: true },
-        { name: 'Buy', link: '/buy', current: false },
-        { name: 'Sell', link: '/sell', current: false },
-        { name: 'Manage Property', link: '/manage', current: false },
-        { name: 'Resources', link: '/resources', current: false },
+        {id: 1, name: 'Rent', link: '/rent', current: true },
+        {id: 2, name: 'Buy', link: '/buy', current: false },
+        {id: 3, name: 'Sell', link: '/sell', current: false },
+        {id: 4, name: 'Manage Property', link: '/manage', current: false },
+        {id: 5, name: 'Resources', link: '/resources', current: false },
     ]);
  
     const handleClick = (index) => {
@@ -44,7 +44,7 @@ const Navbar = () => {
                                       ( item.name == "Manage Property"|| item.name == "Resources")?(<>
                               
                                        <Link
-                                      key={item.name}
+                                      key={item.id}
                                       to={item.link}
                                       className={classNames(
                                         item.current

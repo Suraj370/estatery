@@ -5,8 +5,9 @@ import { PropertyContext } from '../../../../Context'
 import { FaAngleDown } from 'react-icons/fa'
 
 const HouseType = () => {
-  const {propertyTypes, setPropertyType, propertyType,} = useContext(PropertyContext)
+  const {propertyTypes, setPropertyType, propertyType} = useContext(PropertyContext)
   const [isOpen, setisOpen] = useState(false)
+
   
 
 

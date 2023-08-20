@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaAngleDown } from 'react-icons/fa';
 import Search from '../components/core/Rent/Search';
+import HouseList from '../components/core/Rent/HouseList';
 
 const Rent = () => {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -25,9 +26,10 @@ const Rent = () => {
               </div>
             </button>
           </div>
-          <div className={`transition-opacity duration-300 ${searchOpen ? 'opacity-100' : 'opacity-0'}`}>
+          <div className={` transition-all duration-700 ${searchOpen ? 'opacity-100 max-h-[500px]' : 'opacity-0 max-h-0 '}` }>
             <Search />
           </div>
+          <HouseList/>
     </div>
    
   );

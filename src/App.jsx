@@ -8,7 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <div className='bg-purple-400/20 h-screen py-8'>
+      <div className='bg-purple-400/20 h-full py-8'>
         <Routes>
           <Route path="/" element={<Navigate to="/rent" replace={true} />} />
           <Route path="rent" element={<Rent />} />

@@ -27,7 +27,7 @@ const ContextProvider = ({children}) => {
     })
 
     const allPropertyTypes = properties.map((property) => {
-      return property.propertyType
+      return property.type
     })
 
     const uniqueLocations = ['Location (any)', ...new Set(allLocations)]
