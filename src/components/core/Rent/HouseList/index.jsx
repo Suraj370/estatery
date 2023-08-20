@@ -4,7 +4,6 @@ import Card from './Card';
 
 const HouseList = () => {
   const {properties} = useContext(PropertyContext)
-  
   return (
     <section className='mb-20'>
       <div className='container mx-auto'>
@@ -12,7 +11,7 @@ const HouseList = () => {
           {properties.map((property, index) => {
             return(
               <div key={index}>
-              <Card title = {property.title} img = {property.imgSrc}  location = {property.location}  type = {property.propertyType}/>
+              <Card title = {property.title} img = {property.imgSrc}  address = {property.address}  price = {property.price} rooms = {property.room} bathroom = {property.bathroom} land = {property.land}/>
               </div>
             )
           })}
